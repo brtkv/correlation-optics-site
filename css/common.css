@@ -1,0 +1,245 @@
+body {
+    color: #495057;
+    font-family: Lora,serif;
+    font-size: 20px;
+    background: #f8f9fa;
+    text-decoration: none;
+}
+.wrapper{
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+[class*='__container']{
+    max-width: 1330px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+main{
+    flex: 1 1 auto;
+}
+/*----------------------*/
+.category{
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: inline-block;
+    color: #FFFFFF;
+    font-family: Roboto,sans-serif;
+    font-size:  15px;
+    line-height: 120%;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+.category:hover{
+background: rgba(255, 255, 255, 0.5);
+}
+/*----------------------*/
+.title{
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 127,7778%;
+    color: #FFFFFF;
+
+}
+
+.title_dark { color: #495057;
+    text-decoration: none;
+}
+/************************/
+.text{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 167%;
+}
+/******************************/
+
+.big-post {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color:#FFFFFF;
+}
+.big-post__container {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    z-index: 2;
+    gap: 13px;
+
+}
+.big-post__category {
+    text-decoration: none; 
+}
+
+.big-post__title {
+    max-width: 1200px;
+    color:#FFBF00;
+    font-weight: 900;
+}
+
+.big-post__link-title {
+    text-decoration: none;
+    cursor: pointer;
+    color:#E5E5E5;
+
+}
+.big-post__text {
+    color: #E5E5E5;
+    text-decoration: none; 
+    font-size: 17px;
+}
+
+.big-post__author {
+    text-decoration: none;
+    color:  #FFFFFF;
+    font-weight: 700;
+}
+.big-post__bg {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+    background-color: #343A40;;
+}
+.big-post__bg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.6;
+}
+/******************************/
+
+.related {
+    padding: 100px 0;
+}
+.related__container {
+}
+.related__title {
+    margin-bottom: 45px;
+}
+
+.related__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(520px,1fr));
+    gap:20px;
+}
+.item-related {
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+
+}
+.item-related__category {
+    position: absolute;
+    z-index: 3;
+    top: 20px;
+    right: 20px;
+    text-decoration: none; 
+}
+
+.item-related__content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    align-content: end;
+    min-height: 450px;
+    color: #E5E5E5;
+    gap: 0.935rem;
+    padding: 20px;
+    text-decoration: none; 
+    
+
+}
+.item-related__date {
+}
+.item-related__title {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    
+}
+
+.item-related__title:hover{
+    text-decoration: underline;
+
+}
+.item-related__text {
+}
+
+.item-related__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: #343A40;
+} 
+.item-related__image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: all 0.8s;
+    opacity: 0,8;
+}
+
+
+.item-related:hover .item-related__image img{
+    transform: scale(1.05);
+}
+
+
+@media(max-width:991.98px){
+    .related{
+        padding: 4.375rem 0;
+    }
+}
+
+@media(max-width:767.98px){
+    .related{
+        padding: 2.5rem 0;
+    }
+    .related__title {
+        margin-bottom: 1.5625rem;
+    }
+}
+@media(max-width:479.98px){
+    .related__items{
+        grid-template-columns: repeat(repeat(auto-fill,minmax(280x,1fr)));
+    }
+    .item-related__content{
+        padding: 15px;
+        min-height:300px ;
+    }
+}
+
+/*************************/
+[data-item]{
+    transform: translate(0px,3.125rem);
+    opacity: 0;
+    transition: all 0.8s;
+}
+[data-item].active{
+    transform: translate(0,0);
+    opacity: 1;
+
+}
+
+
